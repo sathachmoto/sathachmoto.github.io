@@ -1,0 +1,33 @@
+{
+  "name": "gplx-app",
+  "version": "1.0.0",
+  "description": "Phan mem sat hach ly thuyet mo to",
+  "author": "Pham Trung Hieu",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.hieu.sathachgplx",
+    "productName": "Sat Hach GPLX",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sat Hach GPLX",
+      "uninstallDisplayName": "Phần Mềm Sát Hạch GPLX"
+    }
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  }
+}
